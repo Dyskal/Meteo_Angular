@@ -1,0 +1,20 @@
+<!--Permet d'ajouter une ville dans la liste grâce au localStorage-->
+<div class="section" ng-controller="villes">
+    <form>
+        <!--Ajout d'un champ d'entrée-->
+        <div class="input-field">
+            <i class="material-icons prefix no-select">location_city</i>
+            <input id="ville_form" ng-model="ville" type="text"/>
+            <label for="ville_form">Entrez une ville</label>
+            <div class="center">
+                <button class="btn waves-effect waves-light purple" ng-click="submit(ville)" type="submit">
+                    Envoyer
+                    <i class="material-icons right">send</i>
+                </button>
+                <br><br>
+                <!--Affichage du résultat de l'ajout : succès ou échec-->
+                <h5 id="result"></h5>
+            </div>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,28 @@
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+
+/* Aide au bon positionnement du pied de page */
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+/* Aide à la position du bouton de suppression d'une ville */
+.btn-holder {
+  position: absolute;
+  display: inline-block;
+}
+
+/* Fix pour l'effet de vagues lors de clic d'un bouton */
+.waves-effect {
+  vertical-align: middle;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="meteo">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="yes" name="mobile-web-app-capable">
+    <title>MaMéteo</title>
+
+    <!--  Imports Scripts Node  -->
+    <script defer src="node_modules/angular/angular.js"></script>
+    <script defer src="node_modules/angular-route/angular-route.js"></script>
+    <script defer src="node_modules/@materializecss/materialize/dist/js/materialize.js"></script>
+
+    <!--  Config Angular  -->
+    <script defer src="js/app.js"></script>
+    <script defer src="js/controllers/controller.js"></script>
+
+    <!--  Feuilles de style CSS  -->
+    <link href="node_modules/@materializecss/materialize/dist/css/materialize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons-wind.css" rel="stylesheet">
+
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+</head>
+
+<body>
+<nav class="teal" role="navigation">
+    <div class="nav-wrapper container">
+        <!--Barre de navigation-->
+        <a class="brand-logo waves-effect waves-light" href="/">MaMétéo</a>
+        <ul class="right hide-on-med-and-down">
+            <li id="meteovilles-active"><a class="waves-effect waves-light" href="/">Accueil</a></li>
+            <li id="villes-active"><a class="waves-effect waves-light" href="/villes">Villes</a></li>
+        </ul>
+
+        <!--Barre de navigation mobile-->
+        <ul class="sidenav" id="nav-mobile">
+            <li><a class="sidenav-close waves-effect waves-light" href="/">Accueil</a></li>
+            <li><a class="sidenav-close waves-effect waves-light" href="/villes">Villes</a></li>
+            <li id="previsions-active"></li>
+        </ul>
+        <a class="sidenav-trigger waves-effect waves-light" data-target="nav-mobile" href="/"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+<!--Élément principal où le modèle sera chargé-->
+<main class="container section">
+    <div ng-view></div>
+</main>
+
+<!--Pied de page contenant les noms des créateurs-->
+<footer class="page-footer teal">
+    <div class="container section center">
+        <h5>À propos</h5>
+        <p>Site réalisé par @Dyskal<br>et @doarb</p>
+    </div>
+</footer>
+
+</body>
+</html>

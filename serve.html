@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr" ng-app="meteo">
+<head>
+    <meta charset="UTF-8">
+    <base href="/">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta content="yes" name="mobile-web-app-capable">
+    <title>MaMéteo</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-icons-wind.min.css" rel="stylesheet">
+</head>
+
+<body>
+<nav class="teal" role="navigation">
+    <div class="nav-wrapper container">
+        <a class="brand-logo waves-effect waves-light" href="/">MaMétéo</a>
+        <ul class="right hide-on-med-and-down">
+            <li id="meteovilles-active"><a class="waves-effect waves-light" href="/">Accueil</a></li>
+            <li id="villes-active"><a class="waves-effect waves-light" href="/villes">Villes</a></li>
+        </ul>
+
+        <ul class="sidenav" id="nav-mobile">
+            <li><a class="sidenav-close waves-effect waves-light" href="/">Accueil</a></li>
+            <li><a class="sidenav-close waves-effect waves-light" href="/villes">Villes</a></li>
+            <li id="previsions-active"></li>
+        </ul>
+        <a class="sidenav-trigger waves-effect waves-light" data-target="nav-mobile" href="/"><i class="material-icons">menu</i></a>
+    </div>
+</nav>
+
+<main class="container section">
+    <ng-view/>
+</main>
+
+<footer class="page-footer teal">
+    <div class="container section center">
+        <h5>À propos</h5>
+        <p>Site réalisé par @Dyskal<br>et @doarb</p>
+    </div>
+</footer>
+
+</body>
+</html>
