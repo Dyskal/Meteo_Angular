@@ -1,5 +1,13 @@
+# Météo Angular
+
+Application web AngularJS dans le cadre du module de développement web client de seconde année de DUT Informatique.
+
+---
+
 Lancement du serveur de test avec `npm start`
+
 Lancement de webpack avec `npm run build`
+
 Lancement du serveur de production avec `npm run serve`
 
 Utilisation d'ESLint et de StyleLint pour améliorer le code.
